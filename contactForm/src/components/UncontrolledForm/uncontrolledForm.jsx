@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import style from './uncontrolledForm.module.scss'
 
 export const UncontrolledForm = () => {
     return(
 
-        <form>
+        <form className={style.formStyle}>
             <label htmlFor = "firstname">
                 First name: 
                 <input name= "firstname" placeholder="Enter your name here"></input>
