@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import style from "./hookForm.module.scss";
 
@@ -27,11 +26,12 @@ export const HookForm = () => {
 
         <label htmlFor="phone">Skriv telefonnummer her:</label>
         <input
-          {...register("phonenumber")}
+          {...register("phonenumber", { required: true })}
           name="phone"
           
           placeholder="Enter your phonenumber here"
         ></input>
+              {errors.phonenumber?.type === 'required' && "Du skal udfylde dette felt med et telefonnummer"}
 
         <label htmlFor="email">
           Email her:
