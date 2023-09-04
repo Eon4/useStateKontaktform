@@ -1,4 +1,14 @@
 
 .formStyle {
     display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: auto;
+
+    label {
+        input {
+            height: 50px;
+            width: 100%;
+        }
+    }
 }
